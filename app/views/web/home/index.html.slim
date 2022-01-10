@@ -1,0 +1,35 @@
+.page 
+    .header 
+        .container 
+            .header_logo 
+                =image_tag('logo.png',class:"logo")
+            .header_menu 
+                = link_to "#",class: "link_menu" do 
+                    |Home
+                = link_to "#",class: "link_menu" do 
+                    |Home
+                = link_to "#",class: "link_menu" do 
+                    |Home
+                = link_to "#",class: "link_menu" do 
+                    |Home
+                = link_to "#",class: "link_menu" do 
+                    |Home
+            .header_profile 
+                .profile-details
+                    - if current_student.present?
+                        =image_tag('1.jpeg', class:"profile_pic")          
+                        i.fa.fa-caret-down.profile_icon aria-hidden="true"
+                            .sub_menu
+                                = link_to edit_student_registration_path,class: "link_sub_menu" do 
+                                    |Profile
+                                = link_to "#",class: "link_sub_menu" do 
+                                    |Settings
+                                =link_to destroy_student_session_path(),class: "link_sub_menu", method: "delete" do 
+                                    |Sign Out
+                        
+                    - else
+                        =link_to new_student_registration_path(),class: "m-r-10 btn btn-outline-danger btn-sign-up-in" do 
+                            |Sign Up
+                        =link_to  new_student_session_path(),class: "btn btn-outline-danger btn-sign-up-in" do 
+                            |Sign In
+                    
