@@ -20,7 +20,8 @@
                         =image_tag('1.jpeg', class:"profile_pic")          
                         i.fa.fa-caret-down.profile_icon aria-hidden="true"
                             .sub_menu
-                                .text_sub_menu Signed in as nohssiw
+                                .text_sub_menu
+                                    | Signed in as nohssiw
                                 = link_to edit_student_registration_path,class: "link_sub_menu" do 
                                     i.fa.fa-pencil-square-o
                                     | Edit Profile
