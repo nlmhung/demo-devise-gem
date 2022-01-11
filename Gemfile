@@ -59,3 +59,10 @@ gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'slim', '~> 4.1'
 gem 'font-awesome-sass'
+gem 'jquery-rails', '~> 4.4'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rswag-specs'
+end
